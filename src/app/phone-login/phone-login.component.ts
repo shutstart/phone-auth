@@ -3,13 +3,15 @@ import { WindowService } from '../window.service';
 import * as firebase from 'firebase';
 import {PhoneNumber} from '../phone.model';
 import {environment} from '../../environments/environment';
+import { AuthService } from '../auth.service';
+
 
 
 @Component({
   selector: 'phone-login',
   templateUrl: './phone-login.component.html',
   styleUrls: ['./phone-login.component.css'],
-  providers: [WindowService]
+  providers: [WindowService,AuthService]
 })
 export class PhoneLoginComponent implements OnInit {
 
@@ -21,7 +23,7 @@ export class PhoneLoginComponent implements OnInit {
 
   user: any;
 
-  constructor(private win: WindowService) { }
+  constructor(private win: WindowService,private auth:AuthService) { }
 
   ngOnInit() {
     firebase.initializeApp(environment.firebase);

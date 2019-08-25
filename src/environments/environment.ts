@@ -5,7 +5,13 @@
 export const environment = {
   production: false,
   firebase: {
-    
+    apiKey: "AIzaSyDwc1LEEekPJbS4bnAeOb-T4TlPfZV04vI",
+    authDomain: "stumaze-8e672.firebaseapp.com",
+    databaseURL: "https://stumaze-8e672.firebaseio.com",
+    projectId: "stumaze-8e672",
+    storageBucket: "",
+    messagingSenderId: "67829865712",
+    appId: "1:67829865712:web:79cd533c52a02c25"
   }
 };
 
