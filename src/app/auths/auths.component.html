@@ -1,0 +1,14 @@
+<form (ngSubmit)="sendOTP(phone.value.country,phone.value.number)" #phone="ngForm">
+  <input type="text" placeholder="number" name="number" ngModel>
+  <input type="text" placeholder="country" ngModel name="country">
+  <button type="submit">Submit</button>
+</form>
+<div id="recaptcha"></div>
+<form (ngSubmit)="varifyOTP(otpForm.value.otp)" #otpForm="ngForm">
+  <input type="text" name="otp" placeholder="otp" ngModel>
+  <button type="submit">Varify</button>
+</form>
+
+<button (click)="signInWithGoogle()">Google</button>
+
+<p *ngIf="user">logged in</p>

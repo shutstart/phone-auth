@@ -23,7 +23,7 @@ export class PhoneLoginComponent implements OnInit {
 
   user: any;
 
-  constructor(private win: WindowService,private auth:AuthService) { }
+  constructor(private win: WindowService) { }
 
   ngOnInit() {
     firebase.initializeApp(environment.firebase);
