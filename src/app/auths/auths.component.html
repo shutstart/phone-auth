@@ -11,4 +11,12 @@
 
 <button (click)="signInWithGoogle()">Google</button>
 
+<form (ngSubmit)="signInWithEmail(email.value.email,email.value.password)" #email="ngForm">
+  <input type="text" placeholder="email" name="email" ngModel>
+  <input type="text" placeholder="Password" ngModel name="password">
+  <button type="submit">Submit</button>
+</form>
+
+
+
 <p *ngIf="user">logged in</p>

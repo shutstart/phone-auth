@@ -50,6 +50,14 @@ export class AuthsComponent implements OnInit {
       console.log(err)
     })
   }
+  signInWithEmail(email,password){
+    this.auth.signInWithEmail(email,password).then(user=>{
+      this.user=user
+      console.log(user)
+    }).catch(e=>{
+      console.log(e)
+    })
+  }
   
 
 }
